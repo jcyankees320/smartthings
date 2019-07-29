@@ -1,6 +1,7 @@
 preferences {
 	section("Internal Access"){
-		input "source1name", "text", title: "Source 1 Name", required: true    
+		input "itachip", "text", title: "IP address of iTech", required: true    
+        input "itachport", "text", title: "Port of iTech", required: true    
 	}
 }
 
@@ -392,7 +393,22 @@ metadata {
 def parse(String description) {
 	log.debug(description)
 }
-def HostAddress() {return "C0A80028:1387"}
+def HostAddress() {
+	def iphex = convertIPtoHex("$itachip")
+	def porthex = convertPortToHex("$itachport")
+	//log.debug "$iphex:$porthex"
+	return "$iphex:$porthex"
+	}
+private String convertIPtoHex(ipAddress) { 
+    String hex = ipAddress.tokenize( '.' ).collect {  String.format( '%02x', it.toInteger() ) }.join()
+	//    log.debug "IP address entered is $ipAddress and the converted hex code is $hex"
+    return hex
+}
+private String convertPortToHex(port) {
+	String hexport = port.toString().format( '%04x', port.toInteger() )
+	//    log.debug hexport
+    return hexport
+}
 def pwron() {return "PR01"}
 def pwroff() {return "PR00"}
 def allzoneunit1() {return "10"}

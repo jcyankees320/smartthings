@@ -90,295 +90,295 @@ metadata {
 		}  
 //All On/Off       
   		standardTile("alloff", "device.switch", decoration: "flat", width: 3, height: 1) {
-      	state "off", label: "All Off", action:"alloff", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff"
+      	state "off", label: "All Off", action:"alloff", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-power.png", backgroundColor:"#ffffff"
       	}
   		standardTile("allon", "device.switch", decoration: "flat", width: 3, height: 1)  {
-      	state "off", label: "All On", action:"allon", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff" 
+      	state "off", label: "All On", action:"allon", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-power.png", backgroundColor:"#ffffff" 
       	}
 //Zone 1
-  		standardTile("zone1", "device.switch", decoration: "flat", width:3, height:2, canChangeIcon: true) {
-        state "on", label: "ZONE1NAME", action:"zone1off", icon:"st.switches.switch.on", backgroundColor:"#00a0dc", nextState:"off"
-        state "off", label: "ZONE1NAME", action:"zone1on", icon:"st.switches.switch.off", backgroundColor:"#ffffff", nextState:"on"
+  		standardTile("zone1", "device.zone1", decoration: "flat", width:3, height:2, canChangeIcon: true) {
+        state "on", label: "ZONE1NAME", action:"zone1off", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-power-on.png", backgroundColor:"#ffffff", nextState:"off"
+        state "off", label: "ZONE1NAME", action:"zone1on", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-power.png", backgroundColor:"#ffffff", nextState:"on"
       	}
         standardTile("zone1vollabel", "default", decoration: "flat", height: 1, width: 1) {
-      	state "default", label: "Volume"
+      	state "default", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/volume.png"
     	}
         controlTile("zone1vol", "device.level", "slider", height: 1, width: 1, range:"(0..38)") {
       	state "zone1vol", label: '${currentValue}', action:"zone1vol"
     	}
         standardTile("zone1basslabel", "default", decoration: "flat", height: 1, width: 1) {
-      	state "default", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/bass.png"
+      	state "default", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/bass.png"
     	}
     	controlTile("zone1bass", "device.level", "slider", height: 1, width: 1, range:"(0..14)") {
       	state "zone1bass", label: '${currentValue}', action:"zone1bass"
     	}
         standardTile("zone1treblabel", "default", decoration: "flat", height: 1, width: 1) {
-      	state "default", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/treble.png"
+      	state "default", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/treble.png"
       	}
         controlTile("zone1treb", "device.level", "slider", height: 1, width: 1, range:"(0..14)") {
         state "zone1treb", label: '${currentValue}', action:"zone1treb"
         }
       	standardTile("z1s1", "device.zone1source1", decoration: "flat", width: 2, height: 2) {
-      	state("off", label:"SOURCE1NAME", action:"zone1source1", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
-   	   	state("on", label:"SOURECE1NAME", action:"zone1source1", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-green.png", backgroundColor:"#ffffff")
+      	state("off", label:"SOURCE1NAME", action:"zone1source1", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
+   	   	state("on", label:"SOURCE1NAME", action:"zone1source1", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-blue.png", backgroundColor:"#ffffff")
     }
     	standardTile("z1s2", "device.zone1source2", decoration: "flat", width: 2, height: 2) {
-      	state("off", label:"SOURCE2NAME", action:"zone1source2", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
-      	state("on", label:"SOURCE2NAME", action:"zone1source2", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-green.png", backgroundColor:"#ffffff")
+      	state("off", label:"SOURCE2NAME", action:"zone1source2", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
+      	state("on", label:"SOURCE2NAME", action:"zone1source2", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-blue.png", backgroundColor:"#ffffff")
     }
        	standardTile("z1s3", "device.zone1source3", decoration: "flat", width: 2, height: 2) {
-      	state("off", label:"SOURCE3NAME", action:"zone1source3", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
-      	state("on", label:"SOURCE3NAME", action:"zone1source3", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-green.png", backgroundColor:"#ffffff")
+      	state("off", label:"SOURCE3NAME", action:"zone1source3", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
+      	state("on", label:"SOURCE3NAME", action:"zone1source3", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-blue.png", backgroundColor:"#ffffff")
     }
     	standardTile("z1s4", "device.zone1source4", decoration: "flat", width: 2, height: 2) {
-      	state("off", label:"SOURCE4NAME", action:"zone1source4", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
-      	state("on", label:"SOURCE4NAME", action:"zone1source4", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-green.png", backgroundColor:"#ffffff")
+      	state("off", label:"SOURCE4NAME", action:"zone1source4", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
+      	state("on", label:"SOURCE4NAME", action:"zone1source4", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-blue.png", backgroundColor:"#ffffff")
     }
     	standardTile("z1s5", "device.zone1source5", decoration: "flat", width: 2, height: 2) {
-      	state("off", label:"SOURCE5NAME", action:"zone1source5", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
-      	state("on", label:"SOURCE5NAME", action:"zone1source5", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-green.png", backgroundColor:"#ffffff")
+      	state("off", label:"SOURCE5NAME", action:"zone1source5", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
+      	state("on", label:"SOURCE5NAME", action:"zone1source5", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-blue.png", backgroundColor:"#ffffff")
     }
     	standardTile("z1s6", "device.zone1source6", decoration: "flat", width: 2, height: 2) {
-      	state("off", label:"SOURCE6NAME", action:"zone1source6", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
-      	state("on", label:"SOURCE6NAME", action:"zone1source6", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-green.png", backgroundColor:"#ffffff")
+      	state("off", label:"SOURCE6NAME", action:"zone1source6", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
+      	state("on", label:"SOURCE6NAME", action:"zone1source6", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-blue.png", backgroundColor:"#ffffff")
     }
 
 //Zone 2 
-  		standardTile("zone2", "device.switch", decoration: "flat", width:3, height:2, canChangeIcon: true) {
-        state "on", label: "ZONE2NAME", action:"zone2off", icon:"st.switches.switch.on", backgroundColor:"#00a0dc", nextState:"off"
-        state "off", label: "ZONE2NAME", action:"zone2on", icon:"st.switches.switch.off", backgroundColor:"#ffffff", nextState:"on"
+  		standardTile("zone2", "device.zone2", decoration: "flat", width:3, height:2, canChangeIcon: true) {
+        state "on", label: "ZONE2NAME", action:"zone2off", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-power-on.png", backgroundColor:"#ffffff", nextState:"off"
+        state "off", label: "ZONE2NAME", action:"zone2on", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-power.png", backgroundColor:"#ffffff", nextState:"on"
       	}
         standardTile("zone2vollabel", "default", decoration: "flat", height: 1, width: 1) {
-      	state "default", label: "Volume"
+      	state "default", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/volume.png"
     	}
         controlTile("zone2vol", "device.level", "slider", height: 1, width: 1, range:"(0..38)") {
       	state "zone2vol", label: '${currentValue}', action:"zone2vol"
     	}
         standardTile("zone2basslabel", "default", decoration: "flat", height: 1, width: 1) {
-      	state "default", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/bass.png"
+      	state "default", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/bass.png"
     	}
     	controlTile("zone2bass", "device.level", "slider", height: 1, width: 1, range:"(0..14)") {
       	state "zone2bass", label: '${currentValue}', action:"zone2bass"
     	}
         standardTile("zone2treblabel", "default", decoration: "flat", height: 1, width: 1) {
-      	state "default", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/treble.png"
+      	state "default", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/treble.png"
       	}
         controlTile("zone2treb", "device.level", "slider", height: 1, width: 1, range:"(0..14)") {
         state "zone2treb", label: '${currentValue}', action:"zone2treb"
         }
       	standardTile("z2s1", "device.zone2source1", decoration: "flat", width: 2, height: 2) {
-      	state("off", label:"SOURCE1NAME", action:"zone2source1", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
-   	   	state("on", label:"SOURCE1NAME", action:"zone2source1", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-green.png", backgroundColor:"#ffffff")
+      	state("off", label:"SOURCE1NAME", action:"zone2source1", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
+   	   	state("on", label:"SOURCE1NAME", action:"zone2source1", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-blue.png", backgroundColor:"#ffffff")
     }
     	standardTile("z2s2", "device.zone2source2", decoration: "flat", width: 2, height: 2) {
-      	state("off", label:"SOURCE2NAME", action:"zone2source2", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
-      	state("on", label:"SOURCE2NAME", action:"zone2source2", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-green.png", backgroundColor:"#ffffff")
+      	state("off", label:"SOURCE2NAME", action:"zone2source2", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
+      	state("on", label:"SOURCE2NAME", action:"zone2source2", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-blue.png", backgroundColor:"#ffffff")
     }
        	standardTile("z2s3", "device.zone2source3", decoration: "flat", width: 2, height: 2) {
-      	state("off", label:"SOURCE3NAME", action:"zone2source3", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
-      	state("on", label:"SOURCE3NAME", action:"zone2source3", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-green.png", backgroundColor:"#ffffff")
+      	state("off", label:"SOURCE3NAME", action:"zone2source3", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
+      	state("on", label:"SOURCE3NAME", action:"zone2source3", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-blue.png", backgroundColor:"#ffffff")
     }
     	standardTile("z2s4", "device.zone2source4", decoration: "flat", width: 2, height: 2) {
-      	state("off", label:"SOURCE4NAME", action:"zone2source4", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
-      	state("on", label:"SOURCE4NAME", action:"zone2source4", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-green.png", backgroundColor:"#ffffff")
+      	state("off", label:"SOURCE4NAME", action:"zone2source4", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
+      	state("on", label:"SOURCE4NAME", action:"zone2source4", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-blue.png", backgroundColor:"#ffffff")
     }
     	standardTile("z2s5", "device.zone2source5", decoration: "flat", width: 2, height: 2) {
-      	state("off", label:"SOURCE5NAME", action:"zone2source5", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
-      	state("on", label:"SOURCE5NAME", action:"zone2source5", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-green.png", backgroundColor:"#ffffff")
+      	state("off", label:"SOURCE5NAME", action:"zone2source5", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
+      	state("on", label:"SOURCE5NAME", action:"zone2source5", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-blue.png", backgroundColor:"#ffffff")
     }
     	standardTile("z2s6", "device.zone2source6", decoration: "flat", width: 2, height: 2) {
-      	state("off", label:"SOURCE6NAME", action:"zone2source6", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
-      	state("on", label:"SOURCE6NAME", action:"zone2source6", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-green.png", backgroundColor:"#ffffff")
+      	state("off", label:"SOURCE6NAME", action:"zone2source6", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
+      	state("on", label:"SOURCE6NAME", action:"zone2source6", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-blue.png", backgroundColor:"#ffffff")
     }
         
         
 //Zone 3 
-  		standardTile("zone3", "device.switch", decoration: "flat", width:3, height:2, canChangeIcon: true) {
-        state "on", label: "ZONE3NAME", action:"zone3off", icon:"st.switches.switch.on", backgroundColor:"#00a0dc", nextState:"off"
-        state "off", label: "ZONE3NAME", action:"zone3on", icon:"st.switches.switch.off", backgroundColor:"#ffffff", nextState:"on"
+  		standardTile("zone3", "device.zone3", decoration: "flat", width:3, height:2, canChangeIcon: true) {
+        state "on", label: "ZONE3NAME", action:"zone3off", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-power-on.png", backgroundColor:"#ffffff", nextState:"off"
+        state "off", label: "ZONE3NAME", action:"zone3on", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-power.png", backgroundColor:"#ffffff", nextState:"on"
       	}
         standardTile("zone3vollabel", "default", decoration: "flat", height: 1, width: 1) {
-      	state "default", label: "Volume"
+      	state "default", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/volume.png"
     	}
         controlTile("zone3vol", "device.level", "slider", height: 1, width: 1, range:"(0..38)") {
       	state "zone3vol", label: '${currentValue}', action:"zone3vol"
     	}
         standardTile("zone3basslabel", "default", decoration: "flat", height: 1, width: 1) {
-      	state "default", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/bass.png"
+      	state "default", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/bass.png"
     	}
     	controlTile("zone3bass", "device.level", "slider", height: 1, width: 1, range:"(0..14)") {
       	state "zone3bass", label: '${currentValue}', action:"zone3bass"
     	}
         standardTile("zone3treblabel", "default", decoration: "flat", height: 1, width: 1) {
-      	state "default", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/treble.png"
+      	state "default", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/treble.png"
       	}
         controlTile("zone3treb", "device.level", "slider", height: 1, width: 1, range:"(0..14)") {
         state "zone3treb", label: '${currentValue}', action:"zone3treb"
         }    
       	standardTile("z3s1", "device.zone3source1", decoration: "flat", width: 2, height: 2) {
-      	state("off", label:"SOURCE1NAME", action:"zone3source1", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
-   	   	state("on", label:"SOURCE1NAME", action:"zone3source1", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-green.png", backgroundColor:"#ffffff")
+      	state("off", label:"SOURCE1NAME", action:"zone3source1", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
+   	   	state("on", label:"SOURCE1NAME", action:"zone3source1", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-blue.png", backgroundColor:"#ffffff")
     }
     	standardTile("z3s2", "device.zone3source2", decoration: "flat", width: 2, height: 2) {
-      	state("off", label:"SOURCE2NAME", action:"zone3source2", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
-      	state("on", label:"SOURCE2NAME", action:"zone3source2", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-green.png", backgroundColor:"#ffffff")
+      	state("off", label:"SOURCE2NAME", action:"zone3source2", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
+      	state("on", label:"SOURCE2NAME", action:"zone3source2", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-blue.png", backgroundColor:"#ffffff")
     }
        	standardTile("z3s3", "device.zone3source3", decoration: "flat", width: 2, height: 2) {
-      	state("off", label:"SOURCE3NAME", action:"zone3source3", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
-      	state("on", label:"SOURCE3NAME", action:"zone3source3", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-green.png", backgroundColor:"#ffffff")
+      	state("off", label:"SOURCE3NAME", action:"zone3source3", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
+      	state("on", label:"SOURCE3NAME", action:"zone3source3", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-blue.png", backgroundColor:"#ffffff")
     }
     	standardTile("z3s4", "device.zone3source4", decoration: "flat", width: 2, height: 2) {
-      	state("off", label:"SOURCE4NAME", action:"zone3source4", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
-      	state("on", label:"SOURCE4NAME", action:"zone3source4", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-green.png", backgroundColor:"#ffffff")
+      	state("off", label:"SOURCE4NAME", action:"zone3source4", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
+      	state("on", label:"SOURCE4NAME", action:"zone3source4", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-blue.png", backgroundColor:"#ffffff")
     }
     	standardTile("z3s5", "device.zone3source5", decoration: "flat", width: 2, height: 2) {
-      	state("off", label:"SOURCE5NAME", action:"zone3source5", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
-      	state("on", label:"SOURCE5NAME", action:"zone3source5", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-green.png", backgroundColor:"#ffffff")
+      	state("off", label:"SOURCE5NAME", action:"zone3source5", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
+      	state("on", label:"SOURCE5NAME", action:"zone3source5", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-blue.png", backgroundColor:"#ffffff")
     }
     	standardTile("z3s6", "device.zone3source6", decoration: "flat", width: 2, height: 2) {
-      	state("off", label:"SOURCE6NAME", action:"zone3source6", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
-      	state("on", label:"SOURCE6NAME", action:"zone3source6", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-green.png", backgroundColor:"#ffffff")
+      	state("off", label:"SOURCE6NAME", action:"zone3source6", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
+      	state("on", label:"SOURCE6NAME", action:"zone3source6", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-blue.png", backgroundColor:"#ffffff")
     }   
 // Zone 4
-  		standardTile("zone4", "device.switch", decoration: "flat", width:3, height:2, canChangeIcon: true) {
-        state "on", label: "ZONE4NAME", action:"zone4off", icon:"st.switches.switch.on", backgroundColor:"#00a0dc", nextState:"off"
-        state "off", label: "ZONE4NAME", action:"zone4on", icon:"st.switches.switch.off", backgroundColor:"#ffffff", nextState:"on"
+  		standardTile("zone4", "device.zone4", decoration: "flat", width:3, height:2, canChangeIcon: true) {
+        state "on", label: "ZONE4NAME", action:"zone4off", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-power-on.png", backgroundColor:"#ffffff", nextState:"off"
+        state "off", label: "ZONE4NAME", action:"zone4on", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-power.png", backgroundColor:"#ffffff", nextState:"on"
       	}
         standardTile("zone4vollabel", "default", decoration: "flat", height: 1, width: 1) {
-      	state "default", label: "Volume"
+      	state "default", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/volume.png"
     	}
         controlTile("zone4vol", "device.level", "slider", height: 1, width: 1, range:"(0..38)") {
       	state "zone4vol", label: '${currentValue}', action:"zone4vol"
     	}
         standardTile("zone4basslabel", "default", decoration: "flat", height: 1, width: 1) {
-      	state "default", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/bass.png"
+      	state "default", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/bass.png"
     	}
     	controlTile("zone4bass", "device.level", "slider", height: 1, width: 1, range:"(0..14)") {
       	state "zone4bass", label: '${currentValue}', action:"zone4bass"
     	}
         standardTile("zone4treblabel", "default", decoration: "flat", height: 1, width: 1) {
-      	state "default", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/treble.png"
+      	state "default", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/treble.png"
       	}
         controlTile("zone4treb", "device.level", "slider", height: 1, width: 1, range:"(0..14)") {
         state "zone4treb", label: '${currentValue}', action:"zone4treb"
         }    
       	standardTile("z4s1", "device.zone4source1", decoration: "flat", width: 2, height: 2) {
-      	state("off", label:"SOURCE1NAME", action:"zone4source1", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
-   	   	state("on", label:"SOURCE1NAME", action:"zone4source1", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-green.png", backgroundColor:"#ffffff")
+      	state("off", label:"SOURCE1NAME", action:"zone4source1", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
+   	   	state("on", label:"SOURCE1NAME", action:"zone4source1", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-blue.png", backgroundColor:"#ffffff")
     }
     	standardTile("z4s2", "device.zone4source2", decoration: "flat", width: 2, height: 2) {
-      	state("off", label:"SOURCE2NAME", action:"zone4source2", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
-      	state("on", label:"SOURCE2NAME", action:"zone4source2", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-green.png", backgroundColor:"#ffffff")
+      	state("off", label:"SOURCE2NAME", action:"zone4source2", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
+      	state("on", label:"SOURCE2NAME", action:"zone4source2", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-blue.png", backgroundColor:"#ffffff")
     }
        	standardTile("z4s3", "device.zone4source3", decoration: "flat", width: 2, height: 2) {
-      	state("off", label:"SOURCE3NAME", action:"zone4source3", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
-      	state("on", label:"SOURCE3NAME", action:"zone4source3", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-green.png", backgroundColor:"#ffffff")
+      	state("off", label:"SOURCE3NAME", action:"zone4source3", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
+      	state("on", label:"SOURCE3NAME", action:"zone4source3", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-blue.png", backgroundColor:"#ffffff")
     }
     	standardTile("z4s4", "device.zone4source4", decoration: "flat", width: 2, height: 2) {
-      	state("off", label:"SOURCE4NAME", action:"zone4source4", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
-      	state("on", label:"SOURCE4NAME", action:"zone4source4", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-green.png", backgroundColor:"#ffffff")
+      	state("off", label:"SOURCE4NAME", action:"zone4source4", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
+      	state("on", label:"SOURCE4NAME", action:"zone4source4", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-blue.png", backgroundColor:"#ffffff")
     }
     	standardTile("z4s5", "device.zone4source5", decoration: "flat", width: 2, height: 2) {
-      	state("off", label:"SOURCE5NAME", action:"zone4source5", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
-      	state("on", label:"SOURCE5NAME", action:"zone4source5", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-green.png", backgroundColor:"#ffffff")
+      	state("off", label:"SOURCE5NAME", action:"zone4source5", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
+      	state("on", label:"SOURCE5NAME", action:"zone4source5", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-blue.png", backgroundColor:"#ffffff")
     }
     	standardTile("z4s6", "device.zone4source6", decoration: "flat", width: 2, height: 2) {
-      	state("off", label:"SOURCE6NAME", action:"zone4source6", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
-      	state("on", label:"SOURCE6NAME", action:"zone4source6", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-green.png", backgroundColor:"#ffffff")
+      	state("off", label:"SOURCE6NAME", action:"zone4source6", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
+      	state("on", label:"SOURCE6NAME", action:"zone4source6", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-blue.png", backgroundColor:"#ffffff")
     }   
 // Zone 5
-  		standardTile("zone5", "device.switch", decoration: "flat", width:3, height:2, canChangeIcon: true) {
-        state "on", label: "ZONE5NAME", action:"zone5off", icon:"st.switches.switch.on", backgroundColor:"#00a0dc", nextState:"off"
-        state "off", label: "ZONE5NAME", action:"zone5on", icon:"st.switches.switch.off", backgroundColor:"#ffffff", nextState:"on"
+  		standardTile("zone5", "device.zone5", decoration: "flat", width:3, height:2, canChangeIcon: true) {
+        state "on", label: "ZONE5NAME", action:"zone5off", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-power-on.png", backgroundColor:"#ffffff", nextState:"off"
+        state "off", label: "ZONE5NAME", action:"zone5on", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-power.png", backgroundColor:"#ffffff", nextState:"on"
       	}
         standardTile("zone5vollabel", "default", decoration: "flat", height: 1, width: 1) {
-      	state "default", label: "Volume"
+      	state "default", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/volume.png"
     	}
         controlTile("zone5vol", "device.level", "slider", height: 1, width: 1, range:"(0..38)") {
       	state "zone5vol", label: '${currentValue}', action:"zone5vol"
     	}
         standardTile("zone5basslabel", "default", decoration: "flat", height: 1, width: 1) {
-      	state "default", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/bass.png"
+      	state "default", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/bass.png"
     	}
     	controlTile("zone5bass", "device.level", "slider", height: 1, width: 1, range:"(0..14)") {
       	state "zone5bass", label: '${currentValue}', action:"zone5bass"
     	}
         standardTile("zone5treblabel", "default", decoration: "flat", height: 1, width: 1) {
-      	state "default", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/treble.png"
+      	state "default", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/treble.png"
       	}
         controlTile("zone5treb", "device.level", "slider", height: 1, width: 1, range:"(0..14)") {
         state "zone5treb", label: '${currentValue}', action:"zone5treb"
         }    
       	standardTile("z5s1", "device.zone5source1", decoration: "flat", width: 2, height: 2) {
-      	state("off", label:"SOURCE1NAME", action:"zone5source1", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
-   	   	state("on", label:"SOURCE1NAME", action:"zone5source1", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-green.png", backgroundColor:"#ffffff")
+      	state("off", label:"SOURCE1NAME", action:"zone5source1", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
+   	   	state("on", label:"SOURCE1NAME", action:"zone5source1", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-blue.png", backgroundColor:"#ffffff")
     }
     	standardTile("z5s2", "device.zone5source2", decoration: "flat", width: 2, height: 2) {
-      	state("off", label:"SOURCE2NAME", action:"zone5source2", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
-      	state("on", label:"SOURCE2NAME", action:"zone5source2", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-green.png", backgroundColor:"#ffffff")
+      	state("off", label:"SOURCE2NAME", action:"zone5source2", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
+      	state("on", label:"SOURCE2NAME", action:"zone5source2", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-blue.png", backgroundColor:"#ffffff")
     }
        	standardTile("z5s3", "device.zone5source3", decoration: "flat", width: 2, height: 2) {
-      	state("off", label:"SOURCE3NAME", action:"zone5source3", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
-      	state("on", label:"SOURCE3NAME", action:"zone5source3", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-green.png", backgroundColor:"#ffffff")
+      	state("off", label:"SOURCE3NAME", action:"zone5source3", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
+      	state("on", label:"SOURCE3NAME", action:"zone5source3", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-blue.png", backgroundColor:"#ffffff")
     }
     	standardTile("z5s4", "device.zone5source4", decoration: "flat", width: 2, height: 2) {
-      	state("off", label:"SOURCE4NAME", action:"zone5source4", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
-      	state("on", label:"SOURCE4NAME", action:"zone5source4", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-green.png", backgroundColor:"#ffffff")
+      	state("off", label:"SOURCE4NAME", action:"zone5source4", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
+      	state("on", label:"SOURCE4NAME", action:"zone5source4", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-blue.png", backgroundColor:"#ffffff")
     }
     	standardTile("z5s5", "device.zone5source5", decoration: "flat", width: 2, height: 2) {
-      	state("off", label:"SOURCE5NAME", action:"zone5source5", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
-      	state("on", label:"SOURCE5NAME", action:"zone5source5", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-green.png", backgroundColor:"#ffffff")
+      	state("off", label:"SOURCE5NAME", action:"zone5source5", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
+      	state("on", label:"SOURCE5NAME", action:"zone5source5", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-blue.png", backgroundColor:"#ffffff")
     }
     	standardTile("z5s6", "device.zone5source6", decoration: "flat", width: 2, height: 2) {
-      	state("off", label:"SOURCE6NAME", action:"zone5source6", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
-      	state("on", label:"SOURCE6NAME", action:"zone5source6", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-green.png", backgroundColor:"#ffffff")
+      	state("off", label:"SOURCE6NAME", action:"zone5source6", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
+      	state("on", label:"SOURCE6NAME", action:"zone5source6", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-blue.png", backgroundColor:"#ffffff")
   		}   
 // Zone 6
-  		standardTile("zone6", "device.switch", decoration: "flat", width:3, height:2, canChangeIcon: true) {
-        state "on", label: "ZONE6NAME", action:"zone6off", icon:"st.switches.switch.on", backgroundColor:"#00a0dc", nextState:"off"
-        state "off", label: "ZONE6NAME", action:"zone6on", icon:"st.switches.switch.off", backgroundColor:"#ffffff", nextState:"on"
+  		standardTile("zone6", "device.zone6", decoration: "flat", width:3, height:2, canChangeIcon: true) {
+        state "on", label: "ZONE6NAME", action:"zone6off", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-power-on.png", backgroundColor:"#ffffff", nextState:"off"
+        state "off", label: "ZONE6NAME", action:"zone6on", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-power.png", backgroundColor:"#ffffff", nextState:"on"
       	}
         standardTile("zone6vollabel", "default", decoration: "flat", height: 1, width: 1) {
-      	state "default", label: "Volume"
+      	state "default", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/volume.png"
     	}
         controlTile("zone6vol", "device.level", "slider", height: 1, width: 1, range:"(0..38)") {
       	state "zone6vol", label: '${currentValue}', action:"zone6vol"
     	}
         standardTile("zone6basslabel", "default", decoration: "flat", height: 1, width: 1) {
-      	state "default", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/bass.png"
+      	state "default", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/bass.png"
     	}
     	controlTile("zone6bass", "device.level", "slider", height: 1, width: 1, range:"(0..14)") {
       	state "zone6bass", label: '${currentValue}', action:"zone6bass"
     	}
         standardTile("zone6treblabel", "default", decoration: "flat", height: 1, width: 1) {
-      	state "default", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/treble.png"
+      	state "default", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/treble.png"
       	}
         controlTile("zone6treb", "device.level", "slider", height: 1, width: 1, range:"(0..14)") {
         state "zone6treb", label: '${currentValue}', action:"zone6treb"
         }    
       	standardTile("z6s1", "device.zone6source1", decoration: "flat", width: 2, height: 2) {
-      	state("off", label:"SOURCE1NAME", action:"zone6source1", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
-   	   	state("on", label:"SOURCE1NAME", action:"zone6source1", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-green.png", backgroundColor:"#ffffff")
+      	state("off", label:"SOURCE1NAME", action:"zone6source1", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
+   	   	state("on", label:"SOURCE1NAME", action:"zone6source1", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-blue.png", backgroundColor:"#ffffff")
     }
     	standardTile("z6s2", "device.zone6source2", decoration: "flat", width: 2, height: 2) {
-      	state("off", label:"SOURCE2NAME", action:"zone6source2", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
-      	state("on", label:"SOURCE2NAME", action:"zone6source2", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-green.png", backgroundColor:"#ffffff")
+      	state("off", label:"SOURCE2NAME", action:"zone6source2", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
+      	state("on", label:"SOURCE2NAME", action:"zone6source2", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-blue.png", backgroundColor:"#ffffff")
     }
        	standardTile("z6s3", "device.zone6source3", decoration: "flat", width: 2, height: 2) {
-      	state("off", label:"SOURCE3NAME", action:"zone6source3", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
-      	state("on", label:"SOURCE3NAME", action:"zone6source3", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-green.png", backgroundColor:"#ffffff")
+      	state("off", label:"SOURCE3NAME", action:"zone6source3", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
+      	state("on", label:"SOURCE3NAME", action:"zone6source3", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-blue.png", backgroundColor:"#ffffff")
     }
     	standardTile("z6s4", "device.zone6source4", decoration: "flat", width: 2, height: 2) {
-      	state("off", label:"SOURCE4NAME", action:"zone6source4", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
-      	state("on", label:"SOURCE4NAME", action:"zone6source4", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-green.png", backgroundColor:"#ffffff")
+      	state("off", label:"SOURCE4NAME", action:"zone6source4", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
+      	state("on", label:"SOURCE4NAME", action:"zone6source4", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-blue.png", backgroundColor:"#ffffff")
     }
     	standardTile("z6s5", "device.zone6source5", decoration: "flat", width: 2, height: 2) {
-      	state("off", label:"SOURCE5NAME", action:"zone6source5", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
-      	state("on", label:"SOURCE5NAME", action:"zone6source5", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-green.png", backgroundColor:"#ffffff")
+      	state("off", label:"SOURCE5NAME", action:"zone6source5", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
+      	state("on", label:"SOURCE5NAME", action:"zone6source5", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-blue.png", backgroundColor:"#ffffff")
     }
     	standardTile("z6s6", "device.zone6source6", decoration: "flat", width: 2, height: 2) {
-      	state("off", label:"SOURCE6NAME", action:"zone6source6", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
-      	state("on", label:"SOURCE6NAME", action:"zone6source6", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-green.png", backgroundColor:"#ffffff")
+      	state("off", label:"SOURCE6NAME", action:"zone6source6", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
+      	state("on", label:"SOURCE6NAME", action:"zone6source6", icon:"https://raw.githubusercontent.com/poelock/smartthings/master/images/indicator-dot-blue.png", backgroundColor:"#ffffff")
     }   
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

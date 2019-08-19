@@ -1,7 +1,7 @@
 preferences {
 	section("Internal Access"){
-		input "itachip", "text", title: "IP address of iTech", required: true    
-        input "itachport", "text", title: "Port of iTech", required: true    
+		input "itachip", "text", title: "IP address of iTach", required: true    
+        input "itachport", "text", title: "Port of iTach", required: true    
 	}
 }
 
